@@ -1,4 +1,4 @@
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import ArticlesPage from "./pages/ArticlesPage";
 import FormPage from "./pages/FormPage";
 import SingleArticlePage from "./pages/SingleArticlePage";
@@ -21,6 +21,9 @@ function App() {
           </Route>
           <Route path="/add-article">
             <FormPage />
+          </Route>
+          <Route path="/">
+            <Redirect to="/articles" />
           </Route>
         </Switch>
       </main>
